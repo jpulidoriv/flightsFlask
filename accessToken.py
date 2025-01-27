@@ -1,7 +1,7 @@
 import requests
 
-client_id = "FsQEPMbLF16QtPRfgQOWaZyVvFPIriWK"
-client_secret = "0mYU8Sj5rO9aOSz1"
+client_id = "***********************"
+client_secret = "********************"
 
 url_token = "https://test.api.amadeus.com/v1/security/oauth2/token"
 headers = {
