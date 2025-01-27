@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+     border-collapse: collapse;
+}
+ th, td {
+     border: 1px solid #ddd;
+     padding: 8px;
+ }
+ th {
+     background-color: #f2f2f2;
+ }
+ td {
+     text-align: center;
+ }
+.formulario-busqueda {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+ .formulario-busqueda input[type="text"],
+ .formulario-busqueda input[type="date"]{
+    width: 50%;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+ }
+
+
+

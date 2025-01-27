@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+     <meta charset="UTF-8">
+     <title>Búsqueda de Vuelos</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+ </head>
+ <body>
+<form class="formulario-busqueda" method="post" action="{{ url_for('search_flights') }}">
+    <input type="text" name="origen" placeholder="Origen" required>
+    <input type="text" name="destino" placeholder="Destino" required>
+    <input type="date" name="fecha_ida" required>
+    <input type="date" name="fecha_regreso" required>
+    <button type="submit">Buscar</button>
+</form>
+
+<h2>Vuelos Encontrados</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Aerolinea</th>
+            <th>Duración</th>
+            <th>Salida</th>
+            <th>Hora Salida</th>
+            <th>Llegada</th>
+            <th>Hora Llegada</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if vuelos %}
+            {% for vuelo in vuelos %}
+                <tr>
+                    <td>{{ vuelo.Aerolínea }}</td>
+                    <td>{{ vuelo.Duración }}</td>
+                    <td>{{ vuelo.Salida }}</td>
+                    <td>{{ vuelo.HoraSalida }}</td>
+                    <td>{{ vuelo.Llegada }}</td>
+                    <td>{{ vuelo.HoraLlegada }}</td>
+                    <td>{{ vuelo.Precio }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="7">No se encontraron vuelos</td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>
+</body>
+</html>
