@@ -17,7 +17,7 @@ params = {
 
 
 url = "https://test.api.amadeus.com/v2/shopping/flight-offers"
-access_token = "MAUymn0tDmrU0vM1WJuGx3ezaxu0"
+access_token = "************************"
 
 headers = {
     "Authorization": f"Bearer {access_token}"
